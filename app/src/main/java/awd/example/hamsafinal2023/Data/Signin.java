@@ -22,8 +22,13 @@ public class Signin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.signin);
 
+        txtemail= findViewById(R.id.txtemail);
+        txtpass= findViewById(R.id.txtpass);
+        btnsignin= findViewById(R.id.btnsignin);
+        btnsignup= findViewById(R.id.btnsignup);
 
-        
+
+
     }
 
 
