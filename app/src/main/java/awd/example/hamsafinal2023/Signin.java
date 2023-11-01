@@ -1,4 +1,4 @@
-package awd.example.hamsafinal2023.Data;
+package awd.example.hamsafinal2023;
 
 import android.os.Bundle;
 import android.widget.Button;

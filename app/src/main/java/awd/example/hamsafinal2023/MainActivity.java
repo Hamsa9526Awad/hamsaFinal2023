@@ -1,4 +1,4 @@
-package awd.example.hamsafinal2023.Data;
+package awd.example.hamsafinal2023;
 
 import androidx.appcompat.app.AppCompatActivity;
 
