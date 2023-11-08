@@ -1,6 +1,8 @@
 package awd.example.hamsafinal2023;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,9 +29,19 @@ public class Signin extends AppCompatActivity {
         btnsignin= findViewById(R.id.btnsignin);
         btnsignup= findViewById(R.id.btnsignup);
 
+    }
+
+    public void onClicksignup (View v)
+    {
+        //to open new activity from current to next activity
+        Intent i= new Intent(Signin.this,   Signupactivity.class);
+        startActivity(i);
+
 
 
     }
+
+
 
 
 }
