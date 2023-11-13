@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -37,9 +38,50 @@ public class Signin extends AppCompatActivity {
         Intent i= new Intent(Signin.this,   Signupactivity.class);
         startActivity(i);
 
+    }
+
+    public void onClicksignin (View v)
+    {
+        checkEmailPass();
+
 
 
     }
+
+    private void checkEmailPass()
+    {
+        boolean isAllOk=true; // يحوي نتيجة فحص الحقول ان كانت سليمة
+
+        // استخراج النص من حقل الايميل
+        String email= txtemail.getText().toString();
+
+        // استخراج نص كلمة المرور
+        String pass=txtpass.getText().toString();
+
+        // فحص الايميل ان كان طوله أقل من 6 أو لا يحتوي على @ فهو خاطئ
+        if (email.length()<6 || email.contains("@")== false)
+        {
+            // تعديل المتغير ليدل على أن الفحص يعطي نتيجة خاطئة
+            isAllOk=false;
+            // عرض ملاحظة خطأ على الشاشة داخل حقل البريد
+            txtemail.setError("wrong email");
+        }
+        if (pass.length()<8 || pass.contains(" ")== true)
+        {
+            isAllOk=false;
+            txtpass.setError("Wrong password");
+        }
+
+
+        if (isAllOk)
+        {
+            Toast.makeText(this,"All ok",Toast.LENGTH_SHORT).show();
+
+        }
+    }
+
+
+
 
 
 
