@@ -10,6 +10,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.textfield.TextInputEditText;
 
+import awd.example.hamsafinal2023.Data.myUser.MyUser;
+import awd.example.hamsafinal2023.Data.myUser.MyUserQuery;
 import awd.example.hamsafinal2023.R;
 
 public class Signin extends AppCompatActivity {
@@ -77,7 +79,31 @@ public class Signin extends AppCompatActivity {
         {
             Toast.makeText(this,"All ok",Toast.LENGTH_SHORT).show();
 
-        }
+            // بناء قاعدة بيانات وارجاع مؤشر عليها
+            // ببنيها بس اول مرة حدا بسجل يعني أول مستخدم
+            //  واذا كانت مبنية من قبل يعني مش أول واحد بستخدمها بس بحط عليها مؤشر
+            AppDataBase db=AppDataBase.getDB(getApplicationContext());
+
+            //مؤشر لكائن عمليات الجدول
+            MyUserQuery userquery=db.g
+
+            // استدعاء العملية التي تنفذ الاستعلام الذي يفحص البريد (الايميل) وكلمة المرور ويعيد كائن ان كان موجودا أو ان لم يكن موجود null
+            MyUser myUser=userQuery.checkEmailPassw(email,pass);
+            if (myUser==null)
+            {
+                Toast.makeText(this, "Wrong email or password", Toast.LENGTH_LONG).show();
+            }
+            else
+            {
+                //to open new activity from current to next activity
+                Intent i= new Intent(Signin.this,   MainActivity.class);
+                startActivity(i);
+                finish();
+
+
+
+
+            }
     }
 
 
