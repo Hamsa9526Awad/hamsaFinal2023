@@ -10,8 +10,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.textfield.TextInputEditText;
 
-import awd.example.hamsafinal2023.R;
-
 public class Signupactivity extends AppCompatActivity {
 
     private TextInputEditText ETemail;
@@ -43,7 +41,7 @@ public class Signupactivity extends AppCompatActivity {
     {
         checkData();
         //to open new activity from current to next activity
-        Intent i= new Intent(Signupactivity.this,   Signin.class);
+        Intent i= new Intent(Signupactivity.this,   SignIn.class);
         startActivity(i);
 
 
@@ -55,7 +53,7 @@ public class Signupactivity extends AppCompatActivity {
     {
 
         //to open new activity from current to next activity
-        Intent i= new Intent(Signupactivity.this,   Signin.class);
+        Intent i= new Intent(Signupactivity.this,   SignIn.class);
         startActivity(i);
 
 

@@ -9,7 +9,7 @@ import androidx.room.Update;
 import java.util.List;
 
 @Dao
-public interface MyUserQuery {
+public interface Myuserquery {
 
         @Query("SELECT * FROM MyUser")
         List<MyUser> getAll();
@@ -20,6 +20,9 @@ public interface MyUserQuery {
         @Query("SELECT * FROM MyUser WHERE email = :myEmail AND " +
                 "passw = :myPassw LIMIT 1")
         MyUser checkEmailPassw(String myEmail, String myPassw);
+
+        @Query("SELECT * FROM MyUser WHERE email = :myEmail")
+        MyUser checkEmailw(String myEmail);
 
         @Insert
         void insertAll(MyUser... users);
