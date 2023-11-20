@@ -23,7 +23,7 @@ public class Profile extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //to open new activity from current to next activity
-                Intent i= new Intent(Profile.this,   SignIn.class);
+                Intent i= new Intent(Profile.this,  EngText.class);
                 startActivity(i);
 
             }
