@@ -4,16 +4,29 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Button;
+import android.widget.SearchView;
 import android.widget.Toast;
 
 import awd.example.hamsafinal2023.R;
 
 public class MainActivity extends AppCompatActivity {
 
+    private SearchView Designs_search;
+    private Button Designsmain;
+    private Button Profilemain;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Designs_search=findViewById(R.id.Designs_search);
+        Designsmain=findViewById(R.id.Designsmain);
+        Profilemain=findViewById(R.id.Profilemain);
+
+
+
 
 
 

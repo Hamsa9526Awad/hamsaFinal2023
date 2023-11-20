@@ -12,17 +12,9 @@
         android:orientation="vertical">
 
         <SearchView
+            android:id="@+id/Designs_search"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-
-        <Spinner
-            android:id="@+id/spinner"
-            android:layout_width="match_parent"
-            android:layout_height="50dp" />
-
-        <ListView
-            android:layout_width="match_parent"
-            android:layout_height="578dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -30,14 +22,14 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/Designs"
+                android:id="@+id/Designsmain"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Designs" />
 
             <Button
-                android:id="@+id/Profile"
+                android:id="@+id/Profilemain"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
