@@ -1,5 +1,7 @@
 package awd.example.hamsafinal2023.Data.myUser;
 
+
+
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;

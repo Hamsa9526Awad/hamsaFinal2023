@@ -1,5 +1,9 @@
 package awd.example.hamsafinal2023.Data.expressions;
 
+import androidx.room.Entity;
+
+@Entity//Entity==Table==جدول
+
 public class Expressions {
 
     public static final int but=12;
