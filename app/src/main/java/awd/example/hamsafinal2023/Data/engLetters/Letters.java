@@ -2,8 +2,7 @@ package awd.example.hamsafinal2023.Data.engLetters;
 
 import androidx.room.Entity;
 
-@Entity//Entity==Table==جدول
-
+//@Entity//Entity==Table==جدول
 public  class Letters
 {
 
