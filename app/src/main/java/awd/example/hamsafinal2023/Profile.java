@@ -1,7 +1,5 @@
 package awd.example.hamsafinal2023;
 
-import static awd.example.hamsafinal2023.Data.engLetters.Letters.v;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,16 +10,22 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
-import android.widget.SearchView;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import java.util.List;
+
+import awd.example.hamsafinal2023.Data.AppDataBase;
 
 public class Profile extends AppCompatActivity {
     private FloatingActionButton addnewdesign;
     private Button Designsmain;
     private Button Profilemain;
+    private AutoCompleteTextView autoetsqorlines;
 
 
 
@@ -32,6 +36,7 @@ public class Profile extends AppCompatActivity {
 
         Designsmain=findViewById(R.id.Designsmain);
         Profilemain=findViewById(R.id.Profilemain);
+        autoetsqorlines=findViewById(R.id.autoetsqorlines1);
 
 
 
@@ -48,6 +53,8 @@ public class Profile extends AppCompatActivity {
 
 
     }
+
+
 
     public void onClickDesigns (View v)
     {
@@ -109,6 +116,24 @@ public class Profile extends AppCompatActivity {
         });
         AlertDialog dialog = builder.create();//بناء شباك الحوار ديالوغ
         dialog.show();// عرض الشباك
+    }
+
+    private void autoshape()
+    {
+        //مؤشر لقاعدة البيانات
+        AppDataBase db= AppDataBase.getDB(getApplicationContext());
+        String [] sqrline={"Squares","Lines"};
+        ArrayAdapter<String> adapter=new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line);
+        adapter.addAll(sqrline);
+        autoetsqorlines.setAdapter(adapter);
+        autoetsqorlines.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                autoetsqorlines.showDropDown();
+
+            }
+        });
+
     }
 
 
