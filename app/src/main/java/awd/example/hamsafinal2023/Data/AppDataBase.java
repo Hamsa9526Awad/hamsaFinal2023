@@ -6,13 +6,13 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
-import awd.example.hamsafinal2023.Data.engLetters.Letters;
+import awd.example.hamsafinal2023.Data.engLetters.LettersUtil;
 import awd.example.hamsafinal2023.Data.engLetters.LettersQuery;
 import awd.example.hamsafinal2023.Data.expressions.Expressions;
 import awd.example.hamsafinal2023.Data.expressions.ExpressionsQuery;
 import awd.example.hamsafinal2023.Data.myUser.MyUser;
 import awd.example.hamsafinal2023.Data.myUser.Myuserquery;
-import awd.example.hamsafinal2023.Data.numbers.Numbers;
+import awd.example.hamsafinal2023.Data.numbers.NumberUtil;
 import awd.example.hamsafinal2023.Data.numbers.NumbersQuery;
 
 /*
@@ -20,7 +20,7 @@ import awd.example.hamsafinal2023.Data.numbers.NumbersQuery;
  عند تغير أي شيء يخص جدول أو جداول علينا تغيير رقم الاصدار
  ليتم بناء قاعدة البيانات من جديد
  */
-@Database(entities = {MyUser.class, Letters.class, Numbers.class, Expressions.class},version = 1)
+@Database(entities = {MyUser.class, LettersUtil.class, NumberUtil.class, Expressions.class},version = 1)
 
 /**
  * الفئة المسؤولة عن بناء قاعدة البيانات في كل جداولها

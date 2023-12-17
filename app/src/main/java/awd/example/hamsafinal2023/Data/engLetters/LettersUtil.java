@@ -1,10 +1,7 @@
 package awd.example.hamsafinal2023.Data.engLetters;
 
-import androidx.room.Entity;
-import androidx.room.PrimaryKey;
-
 //@Entity//Entity==Table==جدول
-public  class Letters
+public  class LettersUtil
 {
 
     //letters

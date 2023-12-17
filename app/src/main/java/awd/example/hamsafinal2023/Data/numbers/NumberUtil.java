@@ -1,10 +1,9 @@
 package awd.example.hamsafinal2023.Data.numbers;
 
-import androidx.room.Entity;
 
-@Entity//Entity==Table==جدول
+public class NumberUtil {
 
-public class Numbers {
+
 
     public static final int ramzNumber=	3456; // يوضع قبل كل رقم ليعرف الأعمى أنه
     public static final int n1=1;
